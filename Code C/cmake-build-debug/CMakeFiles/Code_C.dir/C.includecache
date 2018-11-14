@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/grego/OneDrive/Bureau/Projet HeXart Care/Code C/generationCode.c
+generationCode.h
+C:/Users/grego/OneDrive/Bureau/Projet HeXart Care/Code C/generationCode.h
+
+C:/Users/grego/OneDrive/Bureau/Projet HeXart Care/Code C/generationCode.h
+stdio.h
+-
+stdlib.h
+-
+
+C:/Users/grego/OneDrive/Bureau/Projet HeXart Care/Code C/main.c
+menu.c
+C:/Users/grego/OneDrive/Bureau/Projet HeXart Care/Code C/menu.c
+generationCode.c
+C:/Users/grego/OneDrive/Bureau/Projet HeXart Care/Code C/generationCode.c
+
+C:/Users/grego/OneDrive/Bureau/Projet HeXart Care/Code C/menu.c
+menu.h
+C:/Users/grego/OneDrive/Bureau/Projet HeXart Care/Code C/menu.h
+generationCode.h
+C:/Users/grego/OneDrive/Bureau/Projet HeXart Care/Code C/generationCode.h
+
+C:/Users/grego/OneDrive/Bureau/Projet HeXart Care/Code C/menu.h
+
