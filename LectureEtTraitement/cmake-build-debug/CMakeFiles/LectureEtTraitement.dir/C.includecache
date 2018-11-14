@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+D:/CESi/UE 1/PROJET/LectureEtTraitement/inc/actions.h
+general.h
+D:/CESi/UE 1/PROJET/LectureEtTraitement/inc/general.h
+
+D:/CESi/UE 1/PROJET/LectureEtTraitement/inc/donnees.h
+general.h
+D:/CESi/UE 1/PROJET/LectureEtTraitement/inc/general.h
+
+D:/CESi/UE 1/PROJET/LectureEtTraitement/inc/general.h
+stdio.h
+-
+stdlib.h
+-
+
+D:/CESi/UE 1/PROJET/LectureEtTraitement/inc/menu.h
+general.h
+D:/CESi/UE 1/PROJET/LectureEtTraitement/inc/general.h
+
+D:/CESi/UE 1/PROJET/LectureEtTraitement/main.c
+inc/donnees.h
+D:/CESi/UE 1/PROJET/LectureEtTraitement/inc/donnees.h
+inc/menu.h
+D:/CESi/UE 1/PROJET/LectureEtTraitement/inc/menu.h
+inc/actions.h
+D:/CESi/UE 1/PROJET/LectureEtTraitement/inc/actions.h
+
