@@ -2,10 +2,10 @@
 // Created by Etienne on 09/11/2018.
 //
 
-#include "general.h"
-
 #ifndef LECTUREETTRAITEMENT_ACTIONS_H
 #define LECTUREETTRAITEMENT_ACTIONS_H
+
+#include "general.h"
 
 void afficherDonnees(Informations, int);
 void afficherTriees(Informations, Informations *, int, int);

@@ -6,4 +6,7 @@ CMakeFiles\LectureEtTraitement.dir\main.c.obj: ..\inc\donnees.h
 CMakeFiles\LectureEtTraitement.dir\main.c.obj: ..\inc\general.h
 CMakeFiles\LectureEtTraitement.dir\main.c.obj: ..\inc\menu.h
 CMakeFiles\LectureEtTraitement.dir\main.c.obj: ..\main.c
+CMakeFiles\LectureEtTraitement.dir\main.c.obj: ..\src\actions.c
+CMakeFiles\LectureEtTraitement.dir\main.c.obj: ..\src\donnees.c
+CMakeFiles\LectureEtTraitement.dir\main.c.obj: ..\src\menu.c
 

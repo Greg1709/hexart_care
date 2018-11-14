@@ -14,6 +14,7 @@
 #define AGRAVE 133
 #define ECIRCONFLEXE 136
 #define TAILLE_MAX 20
+#define CSV "alea2t1m.csv"
 
 typedef struct{
     int temps;

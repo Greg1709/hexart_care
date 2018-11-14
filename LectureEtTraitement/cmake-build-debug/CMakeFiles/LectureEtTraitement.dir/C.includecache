@@ -25,10 +25,22 @@ general.h
 D:/CESi/UE 1/PROJET/LectureEtTraitement/inc/general.h
 
 D:/CESi/UE 1/PROJET/LectureEtTraitement/main.c
-inc/donnees.h
-D:/CESi/UE 1/PROJET/LectureEtTraitement/inc/donnees.h
-inc/menu.h
-D:/CESi/UE 1/PROJET/LectureEtTraitement/inc/menu.h
-inc/actions.h
+src/donnees.c
+D:/CESi/UE 1/PROJET/LectureEtTraitement/src/donnees.c
+src/menu.c
+D:/CESi/UE 1/PROJET/LectureEtTraitement/src/menu.c
+src/actions.c
+D:/CESi/UE 1/PROJET/LectureEtTraitement/src/actions.c
+
+D:/CESi/UE 1/PROJET/LectureEtTraitement/src/actions.c
+../inc/actions.h
 D:/CESi/UE 1/PROJET/LectureEtTraitement/inc/actions.h
+
+D:/CESi/UE 1/PROJET/LectureEtTraitement/src/donnees.c
+../inc/donnees.h
+D:/CESi/UE 1/PROJET/LectureEtTraitement/inc/donnees.h
+
+D:/CESi/UE 1/PROJET/LectureEtTraitement/src/menu.c
+../inc/menu.h
+D:/CESi/UE 1/PROJET/LectureEtTraitement/inc/menu.h
 

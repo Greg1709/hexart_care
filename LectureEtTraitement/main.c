@@ -1,6 +1,6 @@
-#include "inc/donnees.h"
-#include "inc/menu.h"
-#include "inc/actions.h"
+#include "src/donnees.c"
+#include "src/menu.c"
+#include "src/actions.c"
 
 
 
