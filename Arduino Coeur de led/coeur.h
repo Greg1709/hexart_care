@@ -1,5 +1,5 @@
-#include "main.c"
-#define TEMPS 500; 
+#include "coeur.c"
+#define TEMPS 50; 
 //int led_rouge[]={1,2,3,4,5,6,7,8,9,10};
 int temps = 500;
 //int i; 

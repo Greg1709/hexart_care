@@ -35,7 +35,7 @@ void loop() {
 
   else if(MODE == 5)
   {
-    n= INTERVALLE-1; 
+    n= LED-1; 
     Une_LED_au_choix(n);
   }
 }
