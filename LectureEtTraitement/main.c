@@ -7,38 +7,38 @@
 int main() {
 
     printf("Ouverture du fichier CVS...\n");
-    int nbLigne = tailleDonnees();
+    int nbLigne = tailleDonnees(); //Calcul du nombre de ligne du fichier CSV
     printf("%d lignes trouv%ces.\n", nbLigne, EACUTE);
 
-    Informations *donnees = malloc(nbLigne * sizeof(Information));
+    Informations *donnees = malloc(nbLigne * sizeof(Information)); //Allocation de mémoire pour deux tableaux en fonction du nombre de ligne trouvé
     Informations *donneesTriees = malloc(nbLigne * sizeof(Information));
 
-    extraireDonnees(donnees, nbLigne);
+    extraireDonnees(donnees, nbLigne); //Mise en mémoire des données
 
-    int temps_max = tempsMax(*donnees, nbLigne);
-    int temps_mini = tempsMini(*donnees, nbLigne);
+    int temps_max, temps_mini;
+    tempsMaxMin(*donnees, nbLigne, &temps_mini, &temps_max); //Recherche des temps minimum et maximum durant l'acquisition
     printf("L'intervalle de temps de l'acquisition totale enregistr%ce est [%d;%d].\n", EACUTE, temps_mini, temps_max);
 
     char choix[TAILLE_MAX], choix2[TAILLE_MAX], entree1[TAILLE_MAX], entree2[TAILLE_MAX], choix3[TAILLE_MAX];
 
     do
     {
-        menuPrincipal();
+        menuPrincipal(); //Affichage du menu principal
         scanf("%s", choix);
-        while(isNum(choix) != 1)
+        while(isNum(choix) != 1) //On vérifie que l'utilisateur entre bien un ou des chiffres
         {
-            printf(NOT_NUMBER);
+            printf(NOT_NUMBER); //On affiche une erreur si il n'y a pas que des chiffres
             scanf("%s", choix);
         }
 
         switch (atoi(choix)){
             case 1:
-                afficherDonnees(*donnees, nbLigne);
+                afficherDonnees(*donnees, nbLigne); //Affichage des données dans l'ordre du fichier CSV
                 break;
             case 2:
                 do
                 {
-                    menuOrdre();
+                    menuOrdre(); //Affichage du menu pour le choix de l'ordre de tri demandé
                     scanf("%s", choix2);
                     while(isNum(choix2) != 1)
                     {
@@ -55,7 +55,7 @@ int main() {
                         case 3:
                             break;
                         default:
-                            printf(ERREUR_MENU);
+                            printf(ERREUR_MENU); //On affiche une erreur
                             break;
                     }
                 }
@@ -65,7 +65,7 @@ int main() {
                 printf("L'intervalle de temps total depuis le lancement de l'acquisition va de 0 %c %d.\n", AGRAVE, temps_max);
                 printf("Entrez un intervalle :\n");
 
-                do
+                do //Demande de l'intervalle de temps voulu à l'utilisateur
                 {
                     printf("Borne de gauche :\n");
                     scanf("%s", entree1);
@@ -82,20 +82,20 @@ int main() {
                         scanf("%s", entree2);
                     }
 
-                    if(atoi(entree1) > atoi(entree2)){printf("La borne de droite doit %ctre plus grande que la borne de gauche !\n", ECIRCONFLEXE);}
-                    if((atoi(entree2) > temps_max) || (atoi(entree1) < temps_mini)){printf("L'intervalle ne peuvent pas d%cpasser les temps minimum et maximum de l'acquisition.\n", EACUTE);}
+                    if(atoi(entree1) > atoi(entree2)){printf("La borne de droite doit %ctre plus grande que la borne de gauche !\n", ECIRCONFLEXE);} //Erreur si l'utilisateur entre une borne de droite plus petite que la borne de droite
+                    if((atoi(entree2) > temps_max) || (atoi(entree1) < temps_mini)){printf("L'intervalle ne peuvent pas d%cpasser les temps minimum et maximum de l'acquisition.\n", EACUTE);} //Erreur si l'utilisateur dépasse les maximum et/ou minimum de temps de l'acquisition
                 }
-                while(((atoi(entree1) > atoi(entree2)) || (atoi(entree2) > temps_max) || (atoi(entree1) < temps_mini)));
+                while(((atoi(entree1) > atoi(entree2)) || (atoi(entree2) > temps_max) || (atoi(entree1) < temps_mini))); //Tant qu'il y a des erreurs d'intervalle
 
 
 
                 int borneInf = atoi(entree1), borneSup = atoi(entree2);
 
-                if(poulMaxMin(*donnees, borneInf, borneSup, nbLigne) == 1)
+                if(poulMaxMin(*donnees, borneInf, borneSup, nbLigne) == 1) //Valide si l'intervalle contient bien des valeurs et recherche des pouls max et mini
                 {
-                    poulMoyen(*donnees, borneInf, borneSup, nbLigne);
+                    poulMoyen(*donnees, borneInf, borneSup, nbLigne); //Calcul du poul moyen
 
-                    do
+                    do //Affichage (ou non) des valeurs comprises dans l'intervalle
                     {
                         printf("=== Voulez-vous afficher les donn%ces de cet intervalle ? ===\n1 - Oui\n2 - Non\n", EACUTE);
                         scanf("%s", choix3);
@@ -128,7 +128,7 @@ int main() {
                 break;
         }
     }
-    while(atoi(choix) != 4);
+    while(atoi(choix) != 4); //Si l'utilisateur entre "4" dans le menu principal, il quitte le programme
 
     return 0;
 }

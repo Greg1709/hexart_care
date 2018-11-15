@@ -10,6 +10,7 @@
 
 #define ERREUR_MENU "Veuillez entrer une option du menu !\n"
 #define NOT_NUMBER "Veuillez entrer un nombre !\n"
+#define ERREUR_CSV "Erreur d'ouverture du fichier CSV !\n"
 #define EACUTE 130
 #define AGRAVE 133
 #define ECIRCONFLEXE 136

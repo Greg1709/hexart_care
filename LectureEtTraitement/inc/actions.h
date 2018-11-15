@@ -9,8 +9,9 @@
 
 void afficherDonnees(Informations, int);
 void afficherTriees(Informations, Informations *, int, int);
-int tempsMax(Informations, int);
-int tempsMini(Informations, int);
+void tempsMaxMin(Informations, int, int *, int *);
+/*int tempsMax(Informations, int);
+int tempsMini(Informations, int);*/
 int isNum(char [TAILLE_MAX]);
 int poulMaxMin(Informations, int, int, int);
 void poulMoyen(Informations, int, int, int);
