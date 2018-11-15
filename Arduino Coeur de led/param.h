@@ -1,2 +1,2 @@
-#define MODE 3 
-#define LED 0
+#define MODE 6
+#define CHOIX 0

@@ -1,86 +1,88 @@
-void toutes_leds()
-{
+#include "Arduino.h"
+#include "coeur.h"
+#include "param.h"
 
-  int led_rouge[]={1,2,3,4,5,6,7,8,9,10};
-  int temps = 500;
-  int i; 
-  for(i =0; i<10; i++)
-  {
-    digitalWrite(led_rouge[i],1);
-  }
-  
-  delay(temps);
+// variable global
+int LED[10]; // tableau contenant les pins de nos leds
+short ledTaille; // contient le nombre de led
 
-  
-  for(i =0; i<10; i++)
-  {
-    digitalWrite(led_rouge[i],0);
-  }
-  delay(temps);
-}
-
-void chenille()
-{
- int i = 0;
- int led_rouge[]={1,2,3,4,5,6,7,8,9,10};
- int temps = 500;
-
-  for(i = 0; i < 10; i++)
-  {
-    digitalWrite(led_rouge[i], 1);
-    delay(temps);
-    digitalWrite(led_rouge[i], 0);
-    delay(temps);
-  }
-}
-
-void led_sur_deux()
-{
-  int led_rouge[]={2,3,4,5,6,7,8,9,10,11};
-  int temps = 500;
-  int i; 
-
-   for(i=0; i<10; i= i+2)
-   {
-    digitalWrite(led_rouge[i], 1);
-   }
-  delay(temps);
-
- 
-   for(i=0; i<10; i= i+2)
-   {
-    digitalWrite(led_rouge[i], 0);
-   }
-  delay(temps);
-}
-
-void led_sur_trois()
-{
-  int led_rouge[]={2,3,4,5,6,7,8,9,10,11};
-  int temps = 500;
+void initierLedPin(int pin[], int Taille) { // permet de passer les variables locales en globales au fichier 
+  ledTaille = Taille;
   int i;
-   for(i=0; i<10; i= i+3)
-   {
-    digitalWrite(led_rouge[i], 1);
-   }
-  delay(temps);
-
- 
-   for(i=0; i<10; i= i+3)
-   {
-    digitalWrite(led_rouge[i], 0);
-   }
-  delay(temps);
+  for(i = 0; i < ledTaille; i++){
+    LED[i] = pin[i];
+    pinMode(pin[i], OUTPUT);
+  }
 }
-
-void Une_LED_au_choix(int n)
+ 
+void chenillard() //Allume les led 1 par 1
 {
-  int led_rouge[]={1,2,3,4,5,6,7,8,9,10};
-  int temps = 500;
-
-  digitalWrite(led_rouge[n], 1);
-  delay(temps);
-
-  digitalWrite(led_rouge[n], 0);
-  delay(temps);
+  int i; 
+  for(i =0; i<ledTaille; i++)
+  {
+    digitalWrite(LED[i], HIGH);
+    delay(1000);
+    digitalWrite(LED[i], LOW); 
+  }
+}
+void UneSurDeux() // Allume une led en allant de 2 en 2 
+{
+  int i; 
+  for(i=0; i<ledTaille; i = i+2)
+  {
+    digitalWrite(LED[i], HIGH); 
+    delay(1000);
+    digitalWrite(LED[i], LOW);
+  }
+}
+void UneSurTrois() // Allume une led en allant de 3 en 3 
+{
+  int i; 
+  for(i=0; i<ledTaille; i = i+3)
+  {
+    digitalWrite(LED[i], HIGH); 
+    delay(1000);
+    digitalWrite(LED[i], LOW);
+  }
+}
+void LedChoix(int n) // Allume une LED au choix préalablement choisi par l'utilisateur 
+{
+  digitalWrite(LED[n], HIGH); 
+  delay(1000); 
+  digitalWrite(LED[n], LOW); 
+  delay(1000);
+}
+void ledRandom()
+{
+  int i = random(1,10);
+  digitalWrite(LED[i], HIGH);
+  delay(1000);
+  digitalWrite(LED[i], LOW);
+  delay(1000);
+}
+void menu() //Selectionne le mode d'affichage
+{
+    int n; 
+  switch(MODE)
+  {
+    case 1 : 
+    allLed(); 
+    break;
+    case 2 : 
+    UneSurDeux();
+    break;
+    case 3 :
+    UneSurTrois();
+    break; 
+    case 4 : 
+    chenillard(); 
+    break; 
+    case 5 :
+    n = CHOIX -1; 
+    LedChoix(n);
+    break; 
+    case 6 : 
+    ledRandom();
+    break;
+  }
 }
