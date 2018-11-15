@@ -7,7 +7,7 @@ Serial udSerial;
 int compteur = 0;
 
 void setup() {
-  udSerial = new Serial(this, Serial.list()[0], 1500000);
+  udSerial = new Serial(this, Serial.list()[0], 9600);
   output = createWriter ("Battements.csv");
 }
 
@@ -15,15 +15,14 @@ void setup() {
     
     if (udSerial.available() > 0) {
       String SenVal = udSerial.readString();
-      println(compteur);
-      if (compteur == 99) {
-        output.flush();
-        output.close();
-        exit(); 
-      }
       if (SenVal != null) {
         compteur++;
         output.println(SenVal);
+      }
+      if (compteur == 100) {
+        output.flush();
+        output.close();
+        exit(); 
       }
     }
   }
