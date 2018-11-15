@@ -1,2 +1,2 @@
-#define MODE 2 
-#define INTERVALLE 5
+#define MODE 5 
+#define LED 1
