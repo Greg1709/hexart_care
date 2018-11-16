@@ -1,2 +1,2 @@
-#define MODE 6
+#define MODE 4
 #define CHOIX 0

@@ -1,6 +1,6 @@
 #include "Arduino.h"
 #include "coeur.h"
-
+int temps = 500; 
 void setup(){
   //Serial.begin9600);
   int pins[] = {1,2,3,4,5,6,7,8,9,10};
@@ -9,5 +9,5 @@ void setup(){
 }
 
 void loop(){
-  menu();
+  menu(temps);
 }
