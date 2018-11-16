@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="benja"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2018-11-16 12:32:17 "/>
+        <attribute name="created" value="YmVuamE7TEFQVE9QLUFNM1Q0UVJVOzIwMTgtMTEtMTY7IjEyOjE1OjA2ICI7Mjc4OA=="/>
+        <attribute name="edited" value="YmVuamE7TEFQVE9QLUFNM1Q0UVJVOzIwMTgtMTEtMTY7IjEyOjMyOjE3ICI7MTsyODk3"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <call expression="setup()"/>
+            <comment text="Serial.begin(115200)"/>
+            <call expression="loop()"/>
+            <declare name="pouls" type="Integer" array="False" size=""/>
+            <assign variable="pouls" expression="pulsion()"/>
+            <output expression="&quot;pouls;millis()&quot;" newline="True"/>
+            <comment text="delay(1)"/>
+        </body>
+    </function>
+    <function name="pulsion" type="Integer" variable="pouls">
+        <parameters/>
+        <body>
+            <declare name="pouls, temps1, temps2, moy1, moy2, moyenne, valeur" type="Integer" array="False" size=""/>
+            <assign variable="pouls" expression="0"/>
+            <assign variable="temps1" expression="millis()"/>
+            <assign variable="temps2" expression="millis()"/>
+            <while expression="temps1 - temps2 &lt; 2000">
+                <assign variable="moy1" expression="analogRead(A0)"/>
+                <comment text="delay(10)"/>
+                <assign variable="moy2" expression="analogRead(A0)"/>
+                <if expression="valeur &gt; moyenne">
+                    <then>
+                        <assign variable="pouls" expression="pouls + 1"/>
+                    </then>
+                    <else/>
+                </if>
+                <assign variable="pouls" expression="pouls * 30"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>
