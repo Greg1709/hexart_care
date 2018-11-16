@@ -1,0 +1,48 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+D:/CESi/UE 1/PROJET/LectureEtTraitement/inc/actions.h
+general.h
+D:/CESi/UE 1/PROJET/LectureEtTraitement/inc/general.h
+
+D:/CESi/UE 1/PROJET/LectureEtTraitement/inc/donnees.h
+general.h
+D:/CESi/UE 1/PROJET/LectureEtTraitement/inc/general.h
+actions.h
+D:/CESi/UE 1/PROJET/LectureEtTraitement/inc/actions.h
+
+D:/CESi/UE 1/PROJET/LectureEtTraitement/inc/general.h
+stdio.h
+-
+stdlib.h
+-
+
+D:/CESi/UE 1/PROJET/LectureEtTraitement/inc/menu.h
+general.h
+D:/CESi/UE 1/PROJET/LectureEtTraitement/inc/general.h
+
+D:/CESi/UE 1/PROJET/LectureEtTraitement/main.c
+src/donnees.c
+D:/CESi/UE 1/PROJET/LectureEtTraitement/src/donnees.c
+src/menu.c
+D:/CESi/UE 1/PROJET/LectureEtTraitement/src/menu.c
+src/actions.c
+D:/CESi/UE 1/PROJET/LectureEtTraitement/src/actions.c
+
+D:/CESi/UE 1/PROJET/LectureEtTraitement/src/actions.c
+../inc/actions.h
+D:/CESi/UE 1/PROJET/LectureEtTraitement/inc/actions.h
+
+D:/CESi/UE 1/PROJET/LectureEtTraitement/src/donnees.c
+../inc/donnees.h
+D:/CESi/UE 1/PROJET/LectureEtTraitement/inc/donnees.h
+
+D:/CESi/UE 1/PROJET/LectureEtTraitement/src/menu.c
+../inc/menu.h
+D:/CESi/UE 1/PROJET/LectureEtTraitement/inc/menu.h
+

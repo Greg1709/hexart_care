@@ -1,0 +1,3 @@
+D:/CESi/UE 1/PROJET/LectureEtTraitement/cmake-build-debug/CMakeFiles/LectureEtTraitement.dir
+D:/CESi/UE 1/PROJET/LectureEtTraitement/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/CESi/UE 1/PROJET/LectureEtTraitement/cmake-build-debug/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,4 @@
+"C:\Program Files\JetBrains\CLion 2018.2.4\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug "-DCMAKE_C_COMPILER=C:/Program Files (x86)/MinGW/mingw64/bin/gcc.exe" -G "CodeBlocks - NMake Makefiles" "D:\CESi\UE 1\PROJET\LectureEtTraitement"
+-- Configuring done
+-- Generating done
+-- Build files have been written to: D:/CESi/UE 1/PROJET/LectureEtTraitement/cmake-build-debug
